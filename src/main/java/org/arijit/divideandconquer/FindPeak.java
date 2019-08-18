@@ -1,4 +1,4 @@
-package org.arijit.binarysearch;
+package org.arijit.divideandconquer;
 /**
  * Find Peak in an array where numbers first increases and then decreases
  * @author ARIJIT

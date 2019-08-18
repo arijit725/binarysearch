@@ -1,4 +1,4 @@
-package org.arijit.binarysearch;
+package org.arijit.divideandconquer;
 /**
  * Find occurance of a repitative element in sorted array.
  * @author ARIJIT

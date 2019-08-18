@@ -1,4 +1,4 @@
-package org.arijit.binarysearch;
+package org.arijit.divideandconquer;
 /**
  * Find Celling and floor value of an element from an array
  * @author ARIJIT
