@@ -6,6 +6,55 @@ package org.arijit.divideandconquer;
  */
 public class Occurance {
 
+	/**
+	 * Here  we are using ubiquitious binary search algorithm
+	 * @param arr
+	 * @param low
+	 * @param high
+	 * @param num
+	 */
+	private static void occurance(int arr[], int low, int high, int num) {
+		
+		while((high-low)>1) {
+			int mid = low+(high-low)/2;
+			if((mid-1)>=0 && arr[mid-1]==num)
+				high = mid-1;
+			else if(arr[mid]<=num)
+				low = mid;
+			else if(arr[mid]>num) {
+				high = mid;
+			}
+			
+		}
+	 int firstOcuurance = -1;
+	 if(arr[low]==num)
+		 firstOcuurance = low;
+	 else if(arr[high]==num)
+		 firstOcuurance = high;
+	 System.out.println(firstOcuurance);
+	 
+	 low = firstOcuurance+1;
+	 high = arr.length-1;
+	 while((high-low)>1) {
+			int mid = low+(high-low)/2;
+			if((mid+1)<arr.length && arr[mid+1]==num)
+				low = mid+1;
+			else if(arr[mid]<=num)
+				low = mid;
+			else if(arr[mid]>num) {
+				high = mid;
+			}
+			
+		}
+	 int lastOccurnance = -1;
+	 if(arr[low]==num)
+		 lastOccurnance = low;
+	 else if(arr[high]==num)
+		 lastOccurnance = high;
+	 
+	 System.out.println(lastOccurnance);
+	 
+	}
 	private static int findFirst(int arr[],int low, int high,int num) {	
 		
 		while(low<high) {
@@ -83,6 +132,7 @@ public class Occurance {
 	}
 	public static void main(String args[]) {
 		int arr[] = {1,2,3,3,3,3,3,4,4,5,6};
-		occurance(arr, 2);
+//		occurance(arr, 2);
+		occurance(arr, 0, arr.length-1, 3);
 	}
 }
